@@ -1,20 +1,29 @@
-//Pour mettre des "close buttons" pour chaque élément de la liste
-//je récupère ma liste <li></li>
+
 var myList = document.getElementsByTagName("li");
-//pour chaque élément de la liste
+
 for (var i = 0; i < myList.length; i++) {
-//on crée un élément bouton
-var button = document.createElement("button");
-var text = document.createTextNode("\u00D7");
-//personnaliser le bouton dans le css
-button.className="close";
-//on associe le text au bouton
-button.appendChild(text);
-myList[i].appendChild(button);
+	var button = document.createElement("button");
+	var text = document.createTextNode("\u00D7");
+
+	button.className="close";
+
+	button.appendChild(text);
+	myList[i].appendChild(button);
 }
+
+//permet d'utiliser la touche entrer
+var input = document.getElementById("text");
+
+input.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    insertRow();
+  }
+}); 
 
 addListenner();
 
+//ajout des events sur les boutons remove
 function addListenner(){
 	var buttonremove = document.getElementsByClassName('close');
 	var i = buttonremove.length;
@@ -24,7 +33,6 @@ function addListenner(){
 }
 	
 // Bouton add new task
-	
 function insertRow(){
 	var li= document.createElement("li");
 
@@ -55,21 +63,22 @@ function insertRow(){
 	
 }
 
+//suppression d'une task
 function removeli(){
 	var li = this.parentElement;
 	li.remove();
 }
 
+//suppression de toutes les tasks
 function clearRows(){
 	var ul = document.getElementById("menu");
 	while (ul.firstChild) {
-    ul.removeChild(ul.firstChild);
-}
+	    ul.removeChild(ul.firstChild);
+	}
 }
 
-
+//recherche
 function search() {
-    // Declare variables
     
     var input = document.getElementById('searchInput');
     var ul = document.getElementById("menu");
@@ -78,7 +87,6 @@ function search() {
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
-		
 		
        var span = li[i].getElementsByTagName("span")[0];
         if (span.innerHTML.toUpperCase().indexOf(filter) > -1) {
