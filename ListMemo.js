@@ -58,6 +58,13 @@ function removeli(){
 	li.remove();
 }
 
+function clearRows(){
+	var ul = document.getElementById("menu");
+	while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+}
+}
+
 	
 	
 		
