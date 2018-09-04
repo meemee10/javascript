@@ -31,7 +31,9 @@ function insertRow(){
 	
 	var input=document.getElementById("text").value;
 
-	var t= document.createTextNode(input);
+	var t= document.createElement("span");
+	var value=document.createTextNode(input);
+	t.appendChild(value);
 	li.appendChild(t);
 	var button=document.createElement("button");
 	var text=document.createTextNode("\u00D7");
@@ -64,6 +66,33 @@ function clearRows(){
     ul.removeChild(ul.firstChild);
 }
 }
+
+
+function search() {
+    // Declare variables
+    
+    var input = document.getElementById('searchInput');
+    var ul = document.getElementById("menu");
+    var li = ul.getElementsByTagName('li');
+	var filter = input.value.toUpperCase();
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+		
+		
+       var span = li[i].getElementsByTagName("span")[0];
+        if (span.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+
+
 
 	
 	
