@@ -1,44 +1,37 @@
 <html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="ListMemo.css">
+		<title> Task List </title>
+		<meta charset="utf8">
+	</head>
+	<body>
 
-<head>
-
-	<link rel="stylesheet" type="text/css" href="ListMemo.css">
-	<title> Task List </title>
-	<meta charset="utf8">
-
-</head>
-
-
-<body>
-
-	<fieldset>
-		<h1 id="police"> Task List </h1>
-		<h4 id="police2"> New Task</h4>
+		<fieldset id="taskform">
+			<h1 id="police"> Task List </h1>
+			<h4 id="police2"> New Task</h4>
+			
+			<input id="text" type="text" placeholder="Add new task"/>
+			
+		<button id="insertNewRow" onclick="insertRow()">Add new task</button>
 		
-		<input id="text" type="texte" placeholder="new task"/>
-		<br></br>
+		<hr>
+
+		<h1>Tasks</h1>
+
+		<input id="text" type="text" placeholder="Search task"/>
+
+		<table id="myTable" border="0">	
+			
+			<ul>
+				<li> clean the room</li>
+			</ul>
+
+		</table>
 		
-	<button id="insertNewRow" onclick="insertRow()">Add new task</button>
-	
-	<table id="myTable" border="0">	
-	
-	<h1>Tasks</h1>
-	
-	<ul>
-		<li> clean the room</li>
-		<li></li>
-		<li></li>
-	
-	</ul>
+		<button id="clearRows" onclick="insertRow()">Clear Tasks</button>
+		
+		</fieldset>
 
-	</table>
-	
-	<button id="clearRows" onclick="insertRow()">Clear Tasks</button>
-	
-	</fieldset>
-
-<script src="list.js"></script>
-
-</body>
-
+	<script src="list.js"></script>
+	</body>
 </html>

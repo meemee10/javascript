@@ -1,0 +1,63 @@
+#taskform{
+	margin:auto;
+	width:60%;
+	padding:5%;
+}
+
+button{
+	margin-bottom:4%;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid #4b8f29;
+   	padding:5px;
+   	width:100%;
+
+   	margin:2% 0;
+}
+
+#insertNewRow {
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+
+#insertNewRow:hover {
+	background-color:#72b352;
+}
+
+#insertNewRow:active {
+	position:relative;
+	top:1px;
+}
+
+#clearRows {
+	background-color:#d0451b;
+	border-radius:4px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 15px;
+	text-shadow:0px 1px 0px #854629;
+}
+
+#clearRows:hover {
+	background-color:#bc3315;
+}
+
+#clearRows:active {
+	position:relative;
+	top:1px;
+}
